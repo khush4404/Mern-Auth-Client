@@ -74,7 +74,7 @@ export const AddEditUser = () => {
                 setInitialEmail(email);
 
                 if (imgUrl) {
-                    setPreviewUrl(`https://s3.tebi.io/merndemo/users/${imgUrl}`);
+                    setPreviewUrl(`${import.meta.env.VITE_TEBI_PUBLIC_URL}merndemo/users/${imgUrl}`);
                 }
             } catch {
                 toast.error("Failed to load user data");
